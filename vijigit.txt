@@ -1,0 +1,512 @@
+Register in githup (github.com_
+Create new file 
+to clone <GIT CLONE webrurl( click "clone donwload" on the created file)>
+ssh-keygen -t rsa -b 4096 -C "tsanviji@gmail.com" 
+to copy the text <clip < ~/.ssh/id_rsa.pub>
+
+to  create a or update file in githash ( using vi filename.txt)
+to check status ( GIT status)
+to push the file to local server  <git commit -m "comment">
+to push the file to remote server <git push origin HEAD>
+In case clone fails 
+	git config --global user.email "you@example.com"
+	git config --global user.name "Your Name"
+to create branch <git branch>
+to checkout to branch <git checkout branchname>
+to checkout from branch <git branch>
+To create and checkout to branch <git checkout -b "branchname">
+
+
+
+
+
+--------------
+
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ git cloen
+git: 'cloen' is not a git command. See 'git --help'.
+
+The most similar command is
+        clone
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ git clone https://github.com/tsanviji/repo2.git
+Cloning into 'repo2'...
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 12 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), done.
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ ssh-keygen -t rsa -b 4096 -c "tsanviji@gmail.com"
+Too many arguments.
+usage: ssh-keygen [-q] [-b bits] [-t dsa | ecdsa | ed25519 | rsa]
+                  [-N new_passphrase] [-C comment] [-f output_keyfile]
+       ssh-keygen -p [-P old_passphrase] [-N new_passphrase] [-f keyfile]
+       ssh-keygen -i [-m key_format] [-f input_keyfile]
+       ssh-keygen -e [-m key_format] [-f input_keyfile]
+       ssh-keygen -y [-f input_keyfile]
+       ssh-keygen -c [-P passphrase] [-C comment] [-f keyfile]
+       ssh-keygen -l [-v] [-E fingerprint_hash] [-f input_keyfile]
+       ssh-keygen -B [-f input_keyfile]
+       ssh-keygen -D pkcs11
+       ssh-keygen -F hostname [-f known_hosts_file] [-l]
+       ssh-keygen -H [-f known_hosts_file]
+       ssh-keygen -R hostname [-f known_hosts_file]
+       ssh-keygen -r hostname [-f input_keyfile] [-g]
+       ssh-keygen -G output_file [-v] [-b bits] [-M memory] [-S start_point]
+       ssh-keygen -T output_file -f input_file [-v] [-a rounds] [-J num_lines]
+                  [-j start_line] [-K checkpt] [-W generator]
+       ssh-keygen -s ca_key -I certificate_identity [-h] [-U]
+                  [-D pkcs11_provider] [-n principals] [-O option]
+                  [-V validity_interval] [-z serial_number] file ...
+       ssh-keygen -L [-f input_keyfile]
+       ssh-keygen -A
+       ssh-keygen -k -f krl_file [-u] [-s ca_public] [-z version_number]
+                  file ...
+       ssh-keygen -Q -f krl_file file ...
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ ssh-keygen -t rsa -b 4096 -C "tsanviji@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Hvuser/.ssh/id_rsa): sshkey1
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in sshkey1.
+Your public key has been saved in sshkey1.pub.
+The key fingerprint is:
+SHA256:8s/s/F5Z2D/z8G9AtHOHrjocIDV9nI/NLMD35GuDTrM tsanviji@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|         o . .   |
+|        o + = o  |
+|       . . + @ o |
+|      . .   o %oo|
+|      ..S.   =.++|
+|       o  . + *o.|
+|        .. + =+=.|
+|         =o E. o=|
+|         .B=o  .=|
++----[SHA256]-----+
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ clip < ~/.ssh/id_rsa.pub
+bash: /c/Users/Hvuser/.ssh/id_rsa.pub: No such file or directory
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ clip < ~/.ssh/id_rsa/sshkey1.pub
+bash: /c/Users/Hvuser/.ssh/id_rsa/sshkey1.pub: No such file or directory
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ ssh-keygen -t rsa -b 4096 -C "tsanviji@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/Hvuser/.ssh/id_rsa):
+Created directory '/c/Users/Hvuser/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/Hvuser/.ssh/id_rsa.
+Your public key has been saved in /c/Users/Hvuser/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:aG8C89AmI6nrRAX92SKRwJb5ufUlIcf2wdqjxUaTilM tsanviji@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|.o= . . . .      |
+| =.+ . E *       |
+|. ..+ O O o      |
+|  .= O * O       |
+| .o X O S .      |
+|.. o X +         |
+|..    o o        |
+|..     o         |
+|o.               |
++----[SHA256]-----+
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ clip < ~/.ssh/id_rsa.pub
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ git clone https://github.com/tsanviji/repo2.git
+fatal: destination path 'repo2' already exists and is not an empty directory.
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ git clone https://github.com/tsanviji/repo2.git
+fatal: destination path 'repo2' already exists and is not an empty directory.
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ ls
+ AppData/                        'My Documents'@                                                                                 PrintHood@
+'Application Data'@               NetHood@                                                                                       PUTTY.RND
+ Contacts/                        NTUSER.DAT                                                                                     Recent@
+ Cookies@                         ntuser.dat.LOG1                                                                                repo2/
+ Desktop/                         ntuser.dat.LOG2                                                                               'Saved Games'/
+ Documents/                       NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TM.blf                                        Searches/
+ Downloads/                       NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000001.regtrans-ms   SendTo@
+ Favorites/                       NTUSER.DAT{016888bd-6c6f-11de-8d1d-001e0bcde3ec}.TMContainer00000000000000000002.regtrans-ms   sshkey1
+ GNS3/                            NTUSER.DAT{560e280b-05cd-11e8-af43-d43d7e600ece}.TM.blf                                        sshkey1.pub
+ Links/                           NTUSER.DAT{560e280b-05cd-11e8-af43-d43d7e600ece}.TMContainer00000000000000000001.regtrans-ms  'Start Menu'@
+'Local Settings'@                 NTUSER.DAT{560e280b-05cd-11e8-af43-d43d7e600ece}.TMContainer00000000000000000002.regtrans-ms   Templates@
+'mcafee dlp quarantined files'/   ntuser.ini                                                                                     Videos/
+ Music/                           Pictures/                                                                                      workspace/
+
+Hvuser@EBHVR03-09 MINGW64 ~
+$ cd repo2
+
+Hvuser@EBHVR03-09 MINGW64 ~/repo2 (master)
+$ ls
+README.md  test1  test2  test3
+
+Hvuser@EBHVR03-09 MINGW64 ~/repo2 (master)
+$ git clone https://github.com/tsanviji/repo2.git
+Cloning into 'repo2'...
+remote: Counting objects: 12, done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 12 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (12/12), done.
+
+Hvuser@EBHVR03-09 MINGW64 ~/repo2 (master)
+$ ls
+README.md  repo2/  test1  test2  test3
+
+Hvuser@EBHVR03-09 MINGW64 ~/repo2 (master)
+$ d:
+bash: d:: command not found
+
+Hvuser@EBHVR03-09 MINGW64 ~/repo2 (master)
+$ cd d
+bash: cd: d: No such file or directory
+
+Hvuser@EBHVR03-09 MINGW64 ~/repo2 (master)
+$ cd d:
+
+Hvuser@EBHVR03-09 MINGW64 /d
+$ d:
+bash: d:: command not found
+
+Hvuser@EBHVR03-09 MINGW64 /d
+$ dir
+$RECYCLE.BIN  Angular  Hexaware      HVIMAGE500.GHO  Nag.txt  System\ Volume\ Information  TypeScript
+30062017      git      Hexaware.zip  Interface       Project  Test_Workspace_MBT
+
+Hvuser@EBHVR03-09 MINGW64 /d
+$ ls
+'$RECYCLE.BIN'/   Angular/   Hexaware/      HVIMAGE500.GHO   Nag.txt   'System Volume Information'/   TypeScript/
+ 30062017/        git/       Hexaware.zip   Interface/       Project/   Test_Workspace_MBT/
+
+Hvuser@EBHVR03-09 MINGW64 /d
+$ cd git
+
+Hvuser@EBHVR03-09 MINGW64 /d/git
+$ git clone https://github.com/tsanviji/repo2.git
+fatal: destination path 'repo2' already exists and is not an empty directory.
+
+Hvuser@EBHVR03-09 MINGW64 /d/git
+$ c:
+bash: c:: command not found
+
+Hvuser@EBHVR03-09 MINGW64 /d/git
+$ cd c:
+
+Hvuser@EBHVR03-09 MINGW64 /c
+$ cd user
+bash: cd: user: No such file or directory
+
+Hvuser@EBHVR03-09 MINGW64 /c
+$ cd :
+bash: cd: :: No such file or directory
+
+Hvuser@EBHVR03-09 MINGW64 /c
+$ cd d:
+
+Hvuser@EBHVR03-09 MINGW64 /d
+$ dir
+$RECYCLE.BIN  Angular  Hexaware      HVIMAGE500.GHO  Nag.txt  System\ Volume\ Information  TypeScript
+30062017      git      Hexaware.zip  Interface       Project  Test_Workspace_MBT
+
+Hvuser@EBHVR03-09 MINGW64 /d
+$ cd git
+
+Hvuser@EBHVR03-09 MINGW64 /d/git
+$ git clone https://github.com/tsanviji/repo2.git
+fatal: destination path 'repo2' already exists and is not an empty directory.
+
+Hvuser@EBHVR03-09 MINGW64 /d/git
+$ ls
+repo2/  test1/
+
+Hvuser@EBHVR03-09 MINGW64 /d/git
+$ cd repo2
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ create
+bash: create: command not found
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ ls
+README.md  test1  test2  test3
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ touch test4.txt
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ test4
+bash: test4: command not found
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ vl test4.txt
+bash: vl: command not found
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ vi test4.txt
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   test1
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test4.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ add
+bash: add: command not found
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git add test1.txt
+fatal: pathspec 'test1.txt' did not match any files
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ ls
+README.md  test1  test2  test3  test4.txt
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git add test4.txt
+warning: LF will be replaced by CRLF in test4.txt.
+The file will have its original line endings in your working directory.
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   test4.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   test1
+
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git add test1.txt
+fatal: pathspec 'test1.txt' did not match any files
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git add test1
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   test1
+        new file:   test4.txt
+
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git commit
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Hvuser@EBHVR03-09.(none)')
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git commit -m "first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Hvuser@EBHVR03-09.(none)')
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   test1
+        new file:   test4.txt
+
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git config --global user.email "tsanviji@gmail.com"
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git config --global user.name "tsanviji"
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git commit -m "1st commit"
+[master 9059901] 1st commit
+ 2 files changed, 3 insertions(+)
+ create mode 100644 test4.txt
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ ^C
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ GIT PUSH ORIGIN HEAD
+fatal: cannot handle PUSH.exe as a builtin
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git push origin HEAD
+Username for 'https://github.com': tsanviji
+Counting objects: 4, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (4/4), 392 bytes | 392.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/tsanviji/repo2.git
+   8acd609..9059901  HEAD -> master
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git branch
+* master
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git branch repobranch
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git config --global user.email "tsanviji@gmail.com"
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (master)
+$ git checkout repobranch
+Switched to branch 'repobranch'
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ ^C
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ git checkout -b "repobranch2"
+Switched to a new branch 'repobranch2'
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch2)
+$ ls branch
+ls: cannot access 'branch': No such file or directory
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch2)
+$ git branch
+  master
+  repobranch
+* repobranch2
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch2)
+$ git checkout
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch2)
+$ git checkout repobranch
+Switched to branch 'repobranch'
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ vi test5.txt
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ git branch
+  master
+* repobranch
+  repobranch2
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ ls
+README.md  test1  test2  test3  test4.txt  test5.txt
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ git status
+On branch repobranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        test5.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ git commit -m "push test5"
+On branch repobranch
+Untracked files:
+        test5.txt
+
+nothing added to commit but untracked files present
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ git add test5.txt
+warning: LF will be replaced by CRLF in test5.txt.
+The file will have its original line endings in your working directory.
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ git commit -m "push test5"
+[repobranch abd6ac1] push test5
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test5.txt
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ ls
+README.md  test1  test2  test3  test4.txt  test5.txt
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ git status
+On branch repobranch
+nothing to commit, working tree clean
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ test file 5test file 5test file 5
+bash: test: too many arguments
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$ git push origin HEAD
+Username for 'https://github.com': tsanviji
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 276.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/tsanviji/repo2.git
+ * [new branch]      HEAD -> repobranch
+
+
+Hvuser@EBHVR03-09 MINGW64 /d/git/repo2 (repobranch)
+$
